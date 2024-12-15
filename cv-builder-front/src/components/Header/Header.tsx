@@ -38,15 +38,17 @@ export const Header = () => {
               </select>
             </div>
             <div className={s.myAccount}>
-              <button className="btn">My Account</button>
+              <button className="btn" aria-label="login">
+                My Account
+              </button>
             </div>
           </div>
           <div className={clsx(s.burger, menuOpen && s.burgerOpen)}>
-            <select className="select">
+            <select className="select" aria-label="choose language">
               <option>EN</option>
               <option>UK</option>
             </select>
-            <button className="icon-btn" onClick={() => setMenuOpen(!menuOpen)}>
+            <button className="icon-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="open menu">
               <svg className={s.burgerIconOpen} width={30} height={30} viewBox="0 0 24 24">
                 <path d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"></path>
               </svg>

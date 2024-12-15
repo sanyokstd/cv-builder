@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <section className={s.hero}>
       <picture>
-        <source srcSet="/assets/hero/hero-mob.png" media="(max-width: 767px)" />
+        <source srcSet="/assets/hero/hero-mob.webp" media="(max-width: 767px)" width={767} height={717} />
         <Image priority className={s.imgBack} src="/assets/hero/hero.png" alt="hero" width={1080} height={1416} />
       </picture>
       <div className="container">
