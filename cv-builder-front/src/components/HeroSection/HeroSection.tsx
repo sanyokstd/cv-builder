@@ -4,6 +4,10 @@ import s from './styles.module.scss';
 export const HeroSection = () => {
   return (
     <section className={s.hero}>
+      <picture>
+        <source srcSet="/assets/hero/hero-mob.png" media="(max-width: 767px)" />
+        <Image priority className={s.imgBack} src="/assets/hero/hero.png" alt="hero" width={1080} height={1416} />
+      </picture>
       <div className="container">
         <div className={s.wrap}>
           <h1 className={s.title}>creating a resume</h1>
@@ -19,7 +23,6 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      <Image priority className={s.imgBack} src="/assets/hero/hero.png" alt="hero" width={1080} height={1416} />
     </section>
   );
 };

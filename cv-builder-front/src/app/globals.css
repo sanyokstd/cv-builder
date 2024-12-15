@@ -35,10 +35,16 @@ a {
 }
 
 .container {
-  max-width: 1230px;
-  padding: 0 15px;
+  max-width: 1260px;
+  padding: 0 30px;
   margin: 0 auto;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 
 h1 {
@@ -47,9 +53,21 @@ h1 {
   font-weight: 700;
 }
 
+@media (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
 h2 {
   font-size: 30px;
   font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 26px;
+  }
 }
 
 .btn {
@@ -101,4 +119,24 @@ h2 {
 .select:focus {
   outline: none;
   box-shadow: 0 0 6px var(--black-shadow);
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background-color: transparent;
+}
+
+.icon-btn:hover {
+  box-shadow: 0 0 6px 2px var(--black-shadow);
+}
+
+.icon-btn:focus {
+  box-shadow: 0 0 6px 2px var(--black-shadow);
 }

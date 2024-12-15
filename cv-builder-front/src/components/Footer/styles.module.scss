@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--background-gray);
-  margin-top: 80px;
+  margin-top: 50px;
   padding-bottom: 20px;
   padding-top: 28px;
 }
@@ -19,6 +19,10 @@
   padding-top: 30px;
   margin-top: 30px;
   border-top: 1px solid var(--text-grey);
+  text-align: center;
+  b {
+    display: inline-block;
+  }
 }
 
 .soc {
@@ -46,6 +50,10 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .nav {
@@ -61,5 +69,13 @@
   }
   a:hover {
     opacity: 0.8;
+  }
+
+  @media (max-width: 767px) {
+    ul {
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
   }
 }

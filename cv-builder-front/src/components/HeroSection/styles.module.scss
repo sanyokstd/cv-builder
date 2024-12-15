@@ -1,17 +1,73 @@
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 86px);
   position: relative;
-  margin-top: -86px;
   display: flex;
   align-items: center;
   overflow: hidden;
+  max-width: 2400px;
+  margin: 0 auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  @media (max-width: 1299px) {
+    min-height: initial;
+    margin-top: 0;
+  }
+
+  @media (max-width: 1199px) {
+    padding-top: 150px;
+  }
+
+  @media (max-width: 1023px) {
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.imgBack {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  max-width: 50%;
+  object-fit: cover;
+
+  @media (max-width: 1299px) {
+    height: auto;
+    top: auto;
+    bottom: 0;
+  }
+
+  @media (max-width: 1023px) {
+    height: auto;
+    object-fit: contain;
+    max-width: 30%;
+  }
+
+  @media (max-width: 767px) {
+    position: static;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+.wrap {
+  max-width: 50%;
+  animation: wrapAnimation 1s ease-in-out forwards;
+  position: relative;
+  padding-right: 20px;
   &:before {
     content: '';
     display: block;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotate(5deg) translateX(-50%);
-    left: 0;
+    transform: translateY(-50%) rotate(5deg);
+    right: 50px;
     border-radius: 16px;
     opacity: 0.2;
     z-index: -1;
@@ -22,34 +78,35 @@
     clip-path: ellipse(closest-side closest-side at 50% 50%);
     animation: heroAnimation 1s ease-in-out forwards;
   }
+  @media (max-width: 1023px) {
+    height: auto;
+    object-fit: contain;
+    max-width: 75%;
+    &:before {
+      width: 1000px;
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    padding-right: 0;
+    padding-top: 20px;
+    &:before {
+      right: 20px;
+      width: 700px;
+      height: 300px;
+    }
+  }
 }
 
 @keyframes heroAnimation {
   0% {
-    width: 700px;
-    height: 300px;
-    transform: translateY(-50%) rotate(20deg) translateX(-100%);
+    transform: translateY(-50%) rotate(5deg) scale(0);
   }
   100% {
-    width: 1400px;
-    height: 600px;
-    transform: translateY(-50%) rotate(5deg) translateX(-50%);
+    transform: translateY(-50%) rotate(5deg) scale(1);
   }
-}
-
-.imgBack {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
-  max-width: 50%;
-  object-fit: cover;
-}
-
-.wrap {
-  max-width: 500px;
-  animation: wrapAnimation 1s ease-in-out forwards;
 }
 
 @keyframes wrapAnimation {
@@ -73,17 +130,28 @@
   font-weight: 500;
   margin-bottom: 20px;
   text-transform: uppercase;
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
 }
 
 .des {
   font-size: 20px;
   margin-bottom: 50px;
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
 }
 
 .actionButton {
   position: relative;
   button {
     text-transform: uppercase;
+  }
+  @media (max-width: 767px) {
+    button {
+      width: 100%;
+    }
   }
 }
 
@@ -93,6 +161,10 @@
   transform: rotate(180deg);
   top: 12px;
   animation: arrowAnimation 1s ease-in-out forwards;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 @keyframes arrowAnimation {
