@@ -1,0 +1,105 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  margin-top: -86px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(5deg) translateX(-50%);
+    left: 0;
+    border-radius: 16px;
+    opacity: 0.2;
+    z-index: -1;
+    width: 1400px;
+    height: 600px;
+    background: linear-gradient(115.14deg, #fff 6.39%, #c9c9c9 99.79%);
+    -webkit-clip-path: ellipse(closest-side closest-side at 50% 50%);
+    clip-path: ellipse(closest-side closest-side at 50% 50%);
+    animation: heroAnimation 1s ease-in-out forwards;
+  }
+}
+
+@keyframes heroAnimation {
+  0% {
+    width: 700px;
+    height: 300px;
+    transform: translateY(-50%) rotate(20deg) translateX(-100%);
+  }
+  100% {
+    width: 1400px;
+    height: 600px;
+    transform: translateY(-50%) rotate(5deg) translateX(-50%);
+  }
+}
+
+.imgBack {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: auto;
+  max-width: 50%;
+  object-fit: cover;
+}
+
+.wrap {
+  max-width: 500px;
+  animation: wrapAnimation 1s ease-in-out forwards;
+}
+
+@keyframes wrapAnimation {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sutTitle {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.des {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.actionButton {
+  position: relative;
+  button {
+    text-transform: uppercase;
+  }
+}
+
+.arrow {
+  position: absolute;
+  left: 270px;
+  transform: rotate(180deg);
+  top: 12px;
+  animation: arrowAnimation 1s ease-in-out forwards;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: rotate(180deg) translateX(-100%) scale(0);
+  }
+  100% {
+    transform: rotate(180deg) translateX(0) scale(1);
+  }
+}

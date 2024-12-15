@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="322px" height="92px" viewBox="0 0 322 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="Artboard" transform="translate(-504.000000, -7165.000000)" stroke="#CFD6E6" stroke-width="2">
+            <g id="Group-8" transform="translate(125.000000, 7161.000000)">
+                <g id="Group-33" transform="translate(380.967765, 5.296249)">
+                    <path d="M0,1.66935613 L183.899046,0.0695905743 C188.317156,0.0311249758 191.9299,3.5815547 191.968333,7.99966553 C191.968333,7.99967613 191.968334,7.99968672 191.968302,7.99969759 L192.399527,57.5933195 C192.509295,70.217363 202.774137,80.3933379 215.398658,80.3933379 L312.597777,80.3933379 L312.597777,80.3933379" id="Path-13" stroke-dasharray="10"></path>
+                    <polyline id="Path-14" points="300.201082 71.2770726 317.420402 80.3933379 300.201082 89.0919174"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
