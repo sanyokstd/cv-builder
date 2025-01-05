@@ -1,15 +1,17 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import s from './styles.module.scss';
 import clsx from 'clsx';
 import { useHeaderScroll } from './useHeaderScroll';
 import { useState } from 'react';
+import { LocaleSelect } from '../LocaleSelect/LocaleSelect';
+import { useTranslations } from 'next-intl';
 
 export const Header = () => {
   const hasScrolled = useHeaderScroll();
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const t = useTranslations('Menu');
   return (
     <header className={clsx(s.header, hasScrolled && s.headerScrolled)}>
       <div className="container">
@@ -21,33 +23,27 @@ export const Header = () => {
             <nav className={s.nav}>
               <ul>
                 <li>
-                  <Link href="/">Resume Examples</Link>
+                  <Link href="/">{t('resumeExamples')}</Link>
                 </li>
                 <li>
-                  <Link href="/">Cover letters</Link>
+                  <Link href="/">{t('coverLetters')}</Link>
                 </li>
                 <li>
-                  <Link href="/">Blog</Link>
+                  <Link href="/">{t('blog')}</Link>
                 </li>
               </ul>
             </nav>
             <div className={s.lang}>
-              <select className="select">
-                <option>EN</option>
-                <option>UK</option>
-              </select>
+              <LocaleSelect />
             </div>
             <div className={s.myAccount}>
               <button className="btn" aria-label="login">
-                My Account
+                {t('myAccount')}
               </button>
             </div>
           </div>
           <div className={clsx(s.burger, menuOpen && s.burgerOpen)}>
-            <select className="select" aria-label="choose language">
-              <option>EN</option>
-              <option>UK</option>
-            </select>
+            <LocaleSelect />
             <button className="icon-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="open menu">
               <svg className={s.burgerIconOpen} width={30} height={30} viewBox="0 0 24 24">
                 <path d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"></path>

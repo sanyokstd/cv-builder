@@ -1,10 +1,6 @@
-import { HeroSection } from '@/components';
-import { MainLayout } from '@/layout';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <MainLayout>
-      <HeroSection />
-    </MainLayout>
-  );
+// This page only renders when the app is built statically (output: 'export')
+export default function RootPage() {
+  redirect('/en');
 }

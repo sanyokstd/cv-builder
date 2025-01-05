@@ -145,11 +145,13 @@
 
 .actionButton {
   position: relative;
-  button {
+  display: inline-flex;
+  a {
     text-transform: uppercase;
   }
   @media (max-width: 767px) {
-    button {
+    width: 100%;
+    a {
       width: 100%;
     }
   }
@@ -157,9 +159,9 @@
 
 .arrow {
   position: absolute;
-  left: 270px;
-  transform: rotate(180deg);
-  top: 12px;
+  right: -15px;
+  transform: rotate(180deg) translateX(100%);
+  top: 14px;
   animation: arrowAnimation 1s ease-in-out forwards;
 
   @media (max-width: 767px) {
@@ -169,9 +171,9 @@
 
 @keyframes arrowAnimation {
   0% {
-    transform: rotate(180deg) translateX(-100%) scale(0);
+    transform: rotate(180deg) translateX(-200%) scale(0);
   }
   100% {
-    transform: rotate(180deg) translateX(0) scale(1);
+    transform: rotate(180deg) translateX(-100%) scale(1);
   }
 }

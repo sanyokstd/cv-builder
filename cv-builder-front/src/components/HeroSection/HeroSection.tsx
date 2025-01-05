@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import s from './styles.module.scss';
+import { Link } from '@/i18n/routing';
+import { getLocale, getTranslations } from 'next-intl/server';
 
-export const HeroSection = () => {
+export const HeroSection = async () => {
+  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: 'HeroSection' });
+
   return (
     <section className={s.hero}>
       <picture>
@@ -10,15 +15,17 @@ export const HeroSection = () => {
       </picture>
       <div className="container">
         <div className={s.wrap}>
-          <h1 className={s.title}>creating a resume</h1>
-          <span className={s.sutTitle}>has never been easier</span>
+          <h1 className={s.title}>{t('title')}</h1>
+          <span className={s.sutTitle}>{t('subTitle')}</span>
           <p className={s.des}>
-            Create an excellent resume in minutes.
-            <br />
-            No more manual formatting. Fast, easy, flexible.
+            {t.rich('description', {
+              br: () => <br />,
+            })}
           </p>
           <div className={s.actionButton}>
-            <button className="btn">Create Resume For Free</button>
+            <Link href="/create" className="btn">
+              {t('action')}
+            </Link>
             <Image className={s.arrow} src="/assets/hero/arrow.svg" alt="arrow" width={322} height={92} />
           </div>
         </div>

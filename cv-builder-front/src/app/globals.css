@@ -82,6 +82,7 @@ h2 {
   cursor: pointer;
   box-shadow: 0 2px 10px 0 var(--primary-shadow);
   transition: all 0.3s ease;
+  text-align: center;
 }
 
 .btn:hover {

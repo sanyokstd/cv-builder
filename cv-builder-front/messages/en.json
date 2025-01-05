@@ -1,0 +1,22 @@
+{
+  "MainMeta": {
+    "title": "Better CV",
+    "description": "Generator for your CV"
+  },
+  "HeroSection": {
+    "title": "create a resume",
+    "subTitle": "has never been easier",
+    "description": "Create an excellent resume in minutes.<br></br>No more manual formatting. Fast, easy, flexible.",
+    "action": "Create Resume For Free"
+  },
+  "Menu": {
+    "resumeExamples": "Resume Examples",
+    "coverLetters": "Cover letters",
+    "blog": "Blog",
+    "privacyPolicy": "Privacy Policy",
+    "myAccount": "My Account"
+  },
+  "CreatedBy": {
+    "title": "© The project was created by <b>Olexandr Stadnik</b>"
+  }
+}
